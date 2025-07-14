@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satrya Agung Wijayanto - CV</title>
+
+  <!-- Bootstrap & AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Toggle Dark Mode Button -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+  <style>
+  /* Default Light Mode */
+  body {
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .hero {
+    background: #343a40;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+  }
+
+  .section-title {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+  }
+
+  .cv-section {
+    margin-top: 2rem;
+  }
+
+  .skills li {
+    display: inline-block;
+    background: #e9ecef;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    margin: 0.2rem;
+  }
+
+  .quote-box {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 6px;
+  }
+
+  ul.timeline {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    margin-left: 20px;
+    border-left: 4px solid #0d6efd;
+  }
+
+  ul.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background: #adb5bd;
+  }
+
+  ul.timeline li {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border-left: 4px solid #0d6efd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  ul.timeline li:hover {
+    background-color: #f1f5ff;
+    border-left-color: #ffc107;
+  }
+
+  ul.timeline li h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+
+  ul.timeline li p {
+    margin-bottom: 0;
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 12px;
+    height: 12px;
+    background: #0d6efd;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  /* VSCode Dark Theme */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+  }
+
+  .dark-mode .hero {
+    background-color: #252526;
+    color: #d4d4d4;
+  }
+
+  .dark-mode .section-title {
+    color: #569cd6;
+    border-bottom-color: #3c3c3c;
+  }
+
+  .dark-mode .cv-section h5 {
+    color: #9cdcfe;
+  }
+
+  .dark-mode .skills li {
+    background: #3c3c3c;
+    color: #ce9178;
+    border: 1px solid #2d2d2d;
+  }
+
+  .dark-mode .quote-box {
+    background-color: #333333;
+    color: #c586c0;
+    border-left-color: #d7ba7d;
+  }
+
+  .dark-mode ul.timeline::before {
+    background: #444;
+  }
+
+  .dark-mode ul.timeline li::before {
+    background: #d7ba7d;
+    border-color: #1e1e1e;
+  }
+
+  .toggle-darkmode {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  /* Optional button style */
+  .btn-dark-toggle {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
+
+  .btn-dark-toggle:hover {
+    background-color: #2893d3;
+    color: #fff;
+  }
+
+  .dark-mode .quote-box p {
+    color: #ffffff !important;
+  }
+
+  .dark-mode ul.timeline li {
+    background-color: #2d2d2d;
+    border-left-color: #569cd6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .dark-mode ul.timeline li:hover {
+    background-color: #3a3a3a;
+    border-left-color: #d7ba7d;
+  }
+
+  .dark-mode ul.timeline li h5 {
+    color: #9cdcfe;
+  }
+
+  .dark-mode ul.timeline li p {
+    color: #d4d4d4;
+  }
+
+  /* ===== Expand/Collapse Timeline Details ===== */
+  .toggle-entry::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-entry.expanded::before {
+  transform: rotate(90deg);
+}
+
+  .toggle-entry {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .toggle-entry:hover {
+    color: #0d6efd;
+  }
+
+  .dark-mode .toggle-entry:hover {
+    color: #d7ba7d;
+  }
+
+  .entry-details {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #dee2e6;
+    display: none;
+  }
+
+  .dark-mode .entry-details {
+    border-left-color: #3a3a3a;
+  }
+  .tooltip-gpa {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  font-weight: bold;
+  color: #007acc;
+  transition: color 0.3s ease;
+}
+
+.tooltip-gpa:hover {
+  color: #d7ba7d;
+  text-shadow: 0 0 2px #d7ba7d;
+}
+
+.tooltip-gpa .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #1e1e1e;
+  color: #ffc107;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 10;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: normal;       /* ✅ allow line wrap */
+  max-width: 300px;          /* ✅ slightly increased */
+  min-width: 180px;          /* ✅ ensure it doesn’t get too small */
+  word-break: break-word;    /* ✅ breaks long words */
+}
+
+
+.tooltip-gpa:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.dark-mode .text-muted {
+  color: #bbbbbb !important; /* atau warna netral yang tetap terlihat */
+}
+
+.hero a {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  display: inline-block; /* agar transform bekerja */
+}
+
+.hero a:hover {
+  color: #0d6efd !important;
+  text-decoration: none !important;
+  transform: scale(1.05);
+}
+
+.hero h1,
+.hero h4 {
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: default;
+}
+
+.hero h1:hover,
+.hero h4:hover {
+  color: #0d6efd; /* atau warna lain seperti #0d6efd */
+  transform: scale(1.05);
+}
+
+
+</style>
+
+</head>
+
+<script>
+  function toggleDetails(element) {
+    const details = element.nextElementSibling;
+    const isVisible = details.style.display === 'block';
+    details.style.display = isVisible ? 'none' : 'block';
+    element.classList.toggle('expanded');
+  }
+</script>
+
+<!-- Custom Alert Box -->
+<div id="custom-alert" style="display:none; position:fixed; top:30%; left:50%; transform:translateX(-50%); background:#fff; border:1px solid #ccc; padding:1.5rem 1rem; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.2); z-index:9999; text-align:center; width:280px;">
+  <strong style="color:#b30000;">masAgung / bangSat says:</strong>
+  <p style="margin: 1rem 0;"><span style="font-size:1.2rem;">⚠️</span> what are you searching for?</p>
+  <button onclick="document.getElementById('custom-alert').style.display='none'"
+    style="padding: 0.5rem 1.5rem; background: green; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+    Sorry
+  </button>
+</div>
+
+
+<script>
+  function showCustomAlert() {
+    const alertBox = document.getElementById('custom-alert');
+    alertBox.style.display = 'block';
+  }
+
+  // Blok klik kanan
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showCustomAlert();
+  });
+
+  // Blok shortcut dev tools dan view-source
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      ((e.ctrlKey || e.metaKey) && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) ||
+      ((e.ctrlKey || e.metaKey) && e.key.toUpperCase() === 'U')
+    ) {
+      e.preventDefault();
+      showCustomAlert();
+    }
+  });
+</script>
+
+<body>
+  <button class="btn btn-sm btn-outline-dark toggle-darkmode">🌗 Toggle Dark Mode</button>
+
+  <div class="container mt-4" data-aos="fade-in">
+    <!-- Hero -->
+    <div class="hero text-center" data-aos="zoom-in">
+      <h1 class="mb-0">Satrya Agung Wijayanto</h1>
+      <div><h4 class="mt-2">Senior Infrastructure Architect</h4></div>
+     <p>
+  📍 <a href="https://www.google.com/maps/place/Jl.+Kusuma+Sel.+Blok+E+6+No.34,+RT.008%2FRW.019,+Aren+Jaya,+Kec.+Bekasi+Tim.,+Kota+Bks,+Jawa+Barat+17111/@-6.2364149,107.0317567,19z/data=!4m6!3m5!1s0x2e698eec9a54d8c9:0xb6fff0b7a923293!8m2!3d-6.2364162!4d107.0324004!16s%2Fg%2F11csmb_l6_?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" 
+        target="_blank" 
+        style="color: inherit; text-decoration: none;">
+        Jl. Kusuma Selatan Blok D18 No.3, Aren Jaya, Bekasi Timur
+     </a>
+</p>
+
+<p>
+  🎓 GPA: 
+  <span class="tooltip-gpa">
+    2.86/4
+    <span class="tooltip-text">“numbers never told the whole story”</span>
+  </span>
+  | 📞 <a href="https://wa.me/6287775995075" 
+          target="_blank" 
+          style="color: inherit; text-decoration: none;">
+          6287775995075
+       </a>
+  | ✉️ <a href="mailto:satryaagung@yahoo.com" 
+          style="color: inherit; text-decoration: none;">
+          satryaagung@yahoo.com
+       </a>
+</p>
+
+
+
+      <p><a href="https://www.linkedin.com/in/satryawijayanto" class="btn btn-outline-light btn-sm" target="_blank">LinkedIn Profile</a></p>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote-box" data-aos="fade-up">
+      <strong>"Saya bukan hanya membangun sistem, saya membangun fondasi kepercayaan antara teknologi dan bisnis."</strong>
+      <p class="mb-0 text-muted">– Satrya Agung Wijayanto</p>
+    </div>
+
+    <!-- Career Objective -->
+<div class="cv-section" data-aos="fade-up">
+  <h3 class="section-title">Career Objective</h3>
+  <p>
+    Results-driven <strong>Senior Infrastructure Architect & DevSecOps Specialist</strong> with over 8 years of progressive experience building secure, scalable, and high-availability systems across cloud-native and on-prem environments. Proven ability to lead strategic infrastructure initiatives, optimize CI/CD pipelines, and automate mission-critical deployments using Kubernetes, OpenStack, Ceph, and Kafka. Adept at aligning cross-functional teams to business objectives, driving system resilience, and reducing operational risks.
+  </p>
+  <p>
+    With a strong foundation in networking, security, and automation, I thrive in high-performance environments where <strong>stability, observability, and efficiency</strong> are paramount. Seeking a senior technical leadership role where I can bring deep technical insight, hands-on execution, and <strong>visionary architecture</strong> to accelerate digital transformation and innovation.
+  </p>
+</div>
+
+<!-- Work Experience Timeline - Professional Enhanced Version -->
+<div class="cv-section" data-aos="fade-up">
+  <h3 class="section-title">Work Experience</h3>
+  <ul class="timeline">
+
+    <li class="timeline-item">
+      <h5 class="toggle-entry" onclick="toggleDetails(this)">
+         Senior Infrastructure Architect – <strong>PT. Klik Digital Solusi</strong> <span class="text-muted">(Jul 2020 – Present)</span>
+      </h5>
+      <div class="entry-details" style="display: none;">
+        <p>
+          • Responsible for the architecture, design acquisition, installation and monitoring of all IPDR Project.<br/>
+          • Designed hardware infrastructure for multiple large Internet Protocol Detail Record (IPDR).<br/>
+          • Guided Project Managers through the technical details for successful project completion planning and designing systems that run applications for tracking users’ phone positions and accessing log URLs.<br/>
+          • Reported to the Vice President Products and Technology.<br/>
+          • Connected all IPDR Project with IaaS and PaaS, increasing speed between sites and reducing latency.<br/>
+          • Implemented OpenStack Cloud & Kubernetes to improve DevOps deployment efficiency.
+        </p>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <h5 class="toggle-entry" onclick="toggleDetails(this)">
+         Network System Administrator – <strong>PT. DCI Indonesia</strong> <span class="text-muted">(Dec 2018 – Jul 2020)</span>
+      </h5>
+      <div class="entry-details" style="display: none;">
+        <p>
+          • Monitored large computer network equipment every 3 months.<br/>
+          • Ensured network servers stayed fully operational by escalating issues to Site Manager.<br/>
+          • Provided tier-3 technical support and created optimized workflows.<br/>
+          • Inspected systems within timeframe, exceeding management expectations.<br/>
+          • Stored software documentation safely on Cloud Storage.<br/>
+          • Analyzed test results to determine performance and software durability.<br/>
+          • Mentored engineers in Daily/Weekly tasks, improving productivity.<br/>
+          • Managed software projects from initiation to closure.<br/>
+          • Performed backups across multiple sites and verified system integrity.<br/>
+          • Worked with Ops, Enterprise, and Smarthand Departments.
+        </p>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <h5 class="toggle-entry" onclick="toggleDetails(this)">
+         Network System Operations – <strong>PT. DCI Indonesia</strong> <span class="text-muted">(Jan 2015 – Dec 2018)</span>
+      </h5>
+      <div class="entry-details" style="display: none;">
+        <p>
+          • Operated in 24x7 environment handling alerts and calls under SLA.<br/>
+          • Managed 1500+ CCTV cameras and 1700+ ACS devices.<br/>
+          • Maintained VoIP systems, OS deployment, and software applications.<br/>
+          • Ensured safety checks and escalated critical issues.<br/>
+          • Administered server hardware/software (email, database, AD).<br/>
+          • Controlled access/auth for ICT resources and network equipment.<br/>
+          • Upgraded security software regularly and enforced privacy best practices.
+        </p>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <h5 class="toggle-entry" onclick="toggleDetails(this)">
+         System Engineer – <strong>PT. Prodata Sistem Teknologi</strong> <span class="text-muted">(May 2014 – Dec 2014)</span>
+      </h5>
+      <div class="entry-details" style="display: none;">
+        <p>
+          • Resolved SLA issues using ManageEngine.<br/>
+          • Installed Kaspersky antivirus, setup applications and tooling processes.<br/>
+          • Created backup strategies and trained users on updates.<br/>
+          • Provided remote/live support via calls, emails, and chats.<br/>
+          • Performed frequent system and software security backups.
+        </p>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <h5 class="toggle-entry" onclick="toggleDetails(this)">
+         Network Engineer – <strong>PT. XL-Axiata Tbk</strong> <span class="text-muted">(Nov 2012 – May 2014)</span>
+      </h5>
+      <div class="entry-details" style="display: none;">
+        <p>
+          • Handled network performance tuning and efficiency improvements.<br/>
+          • Led projects with 3 team members, supporting 10+ clients.<br/>
+          • Designed L2/L3 switches with Cisco, Juniper, Fibridge hardware.<br/>
+          • Coordinated vendor support and hardware replacements.<br/>
+          • Performed troubleshooting at Layers 1 & 2 and security patching.<br/>
+          • Wrote performance reports and responded to assurance alerts promptly.
+        </p>
+      </div>
+    </li>
+
+  </ul>
+</div>
+
+
+<!-- Formal Education -->
+<div class="cv-section" data-aos="fade-up">
+  <h3 class="section-title">Formal Education</h3>
+  <ul>
+    <li>
+      <strong>2007–2012:</strong> Bachelor of Computer Science (S.Kom), 
+      <em>Informatics Engineering</em> – STMIK AKAKOM Yogyakarta<br/>
+      <span style="color:gray; font-size: 0.9rem;">Focused on system architecture, network engineering, and software development fundamentals.</span>
+    </li>
+    <li><strong>2004–2007:</strong> High School – SMA Bina Pangudi Luhur Jakarta (Science Major)</li>
+    <li><strong>2001–2004:</strong> Junior High – SMP Negeri 3 Bekasi</li>
+    <li><strong>1995–2001:</strong> Elementary – SD Duren Jaya 14 Bekasi</li>
+  </ul>
+</div>
+<!-- Skills -->
+<div class="cv-section" data-aos="fade-up">
+  <h3 class="section-title">Skills</h3>
+
+  <h5>Cloud Native Technology</h5>
+  <ul class="skills">
+    <li>Container Application</li>
+    <li>AWS, Azure</li>
+    <li>Container Orchestration: Native Kubernetes, DCOS</li>
+    <li>Multi cloud multi cluster configuration</li>
+    <li>Microservices architecture</li>
+    <li>Various CNCF technologies: CI/CD, API Gateway, Service Mesh, Automation, Cloud Native Storage</li>
+    <li>OpenStack Cloud Platform</li>
+  </ul>
+
+  <h5>Operating Systems</h5>
+  <ul class="skills">
+    <li>7+ years Linux Server (Debian, RHEL, CentOS 7, CentOS Stream)</li>
+    <li>2 years Unix (OS X 10.5.4 – 10.7)</li>
+    <li>11+ years Linux Desktop (Ubuntu, OpenSUSE, Fedora, Backtrack)</li>
+    <li>Windows Desktop (7/8/10)</li>
+    <li>Windows Server (2008/2012/2016)</li>
+    <li>Virtualization: vCenter, Hyper-V</li>
+  </ul>
+
+  <h5>Programming & Scripting</h5>
+  <ul class="skills">
+    <li>PHP (native, MVC, CodeIgniter, Laravel)</li>
+    <li>HTML5 & CSS3</li>
+    <li>Bootstrap</li>
+    <li>JavaScript, jQuery</li>
+    <li>Bash & Shell Scripting</li>
+    <li>XML, JSON, YAML</li>
+    <li>RESTful API</li>
+  </ul>
+
+  <h5>Networking</h5>
+  <ul class="skills">
+    <li>WAN, LAN, WLAN</li>
+    <li>Juniper Switching (VLAN, STP, QinQ)</li>
+    <li>Juniper Routing (Static, iBGP, eBGP)</li>
+    <li>Fortigate Firewall (VPN, IDS, IPS)</li>
+    <li>MikroTik (NAT, Firewall, Bandwidth Mgmt)</li>
+    <li>Squid Proxy, Radius Server</li>
+    <li>TCP/IP, HA Networking</li>
+    <li>NMS: MRTG, Cacti, LibreNMS, PRTG</li>
+  </ul>
+
+  <h5>Web Technology</h5>
+  <ul class="skills">
+    <li>Tomcat</li>
+    <li>Apache</li>
+    <li>Nginx</li>
+    <li>HAProxy</li>
+  </ul>
+
+  <h5>Database</h5>
+  <ul class="skills">
+    <li>MySQL</li>
+    <li>MongoDB (NoSQL)</li>
+  </ul>
+
+  <h5>DevOps & Agile</h5>
+  <ul class="skills">
+    <li>Basic Principles & Fundamentals</li>
+    <li>Product Strategy</li>
+    <li>Delivery Strategy</li>
+  </ul>
+
+  <h5>Tools & Software</h5>
+  <ul class="skills">
+    <li>SMPP</li>
+    <li>Entrypass</li>
+    <li>Biostar</li>
+    <li>LibreNMS</li>
+    <li>Cacti</li>
+    <li>Grafana</li>
+    <li>Kibana</li>
+    <li>Druid</li>
+    <li>Vim</li>
+  </ul>
+
+  <h5>Hardware</h5>
+  <ul class="skills">
+    <li>All forms of x86 hardware – from laptops to quad Xeon CPU servers</li>
+  </ul>
+</div>
+
+</div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    document.querySelector('.toggle-darkmode').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
