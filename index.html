@@ -420,10 +420,10 @@
 <div class="cv-section" data-aos="fade-up">
   <h3 class="section-title">Career Objective</h3>
   <p>
-    Results-driven <strong>Senior Infrastructure Architect & DevSecOps Specialist</strong> with over 8 years of progressive experience building secure, scalable, and high-availability systems across cloud-native and on-prem environments. Proven ability to lead strategic infrastructure initiatives, optimize CI/CD pipelines, and automate mission-critical deployments using Kubernetes, OpenStack, Ceph, and Kafka. Adept at aligning cross-functional teams to business objectives, driving system resilience, and reducing operational risks.
+    Results-driven <strong>Senior Infrastructure Architect & DevSecOps Specialist</strong> with over 13 years of progressive experience architecting secure, scalable, and highly available infrastructure across on-prem, private cloud, and hybrid environments. Proven track record designing and operating <strong>bare-metal Kubernetes platforms</strong>, <strong>highly available Ceph storage clusters</strong>, and zero-downtime data platforms on <strong>Kafka (KRaft mode), PostgreSQL HA, Redis Sentinel, and Percona MySQL Cluster</strong>. Adept at aligning cross-functional teams to business objectives, driving system resilience, and reducing operational risk through infrastructure-as-code (Terraform, Ansible) and full-stack observability.
   </p>
   <p>
-    With a strong foundation in networking, security, and automation, I thrive in high-performance environments where <strong>stability, observability, and efficiency</strong> are paramount. Seeking a senior technical leadership role where I can bring deep technical insight, hands-on execution, and <strong>visionary architecture</strong> to accelerate digital transformation and innovation.
+    With a strong foundation in enterprise networking (Juniper, F5, Fortinet, MikroTik), Zero Trust access management (Teleport), and security hardening, I thrive in high-performance environments where <strong>stability, observability, and efficiency</strong> are paramount. Seeking a senior technical leadership role where I can bring deep hands-on execution, formal HLD/LLD architecture practice, and <strong>visionary infrastructure design</strong> to accelerate digital transformation for enterprise, telecommunications, and financial-grade systems.
   </p>
 </div>
 
@@ -438,12 +438,18 @@
       </h5>
       <div class="entry-details" style="display: none;">
         <p>
-          • Responsible for the architecture, design acquisition, installation and monitoring of all IPDR Project.<br/>
-          • Designed hardware infrastructure for multiple large Internet Protocol Detail Record (IPDR).<br/>
-          • Guided Project Managers through the technical details for successful project completion planning and designing systems that run applications for tracking users’ phone positions and accessing log URLs.<br/>
-          • Reported to the Vice President Products and Technology.<br/>
-          • Connected all IPDR Project with IaaS and PaaS, increasing speed between sites and reducing latency.<br/>
-          • Implemented OpenStack Cloud & Kubernetes to improve DevOps deployment efficiency.
+          • Architected and operated production <strong>bare-metal Kubernetes</strong> clusters (kubeadm, MetalLB, containerd) integrated with <strong>GitLab CI/CD</strong>, replacing manual deployment runbooks with GitOps-driven release pipelines.<br/>
+          • Designed and deployed highly available <strong>Ceph distributed storage clusters</strong> (RBD, CephFS, RGW) as the persistent storage backend for Kubernetes and <strong>Proxmox VE</strong> virtualization workloads.<br/>
+          • Migrated production event-streaming infrastructure to <strong>Kafka in KRaft mode</strong>, removing the ZooKeeper dependency and simplifying the messaging platform's operational footprint.<br/>
+          • Designed enterprise <strong>PostgreSQL HA</strong> architecture with automated failover and streaming replication, alongside <strong>Redis Sentinel</strong> and <strong>Percona MySQL Cluster</strong> HA topologies for mission-critical databases.<br/>
+          • Built a unified observability platform (<strong>Prometheus, Grafana, Loki, Fluent Bit, Fluentd, ELK Stack</strong>) consolidating metrics, logs, and alerting into a single pane of glass for infrastructure and application teams.<br/>
+          • Rolled out <strong>Teleport</strong> for Zero Trust infrastructure access, replacing static SSH keys and VPN-based access with identity-aware, fully audited session management.<br/>
+          • Designed and operated network and security architecture — <strong>Juniper</strong> enterprise switching, <strong>F5</strong> load balancing, <strong>Fortinet</strong> HA firewall pairs, and <strong>MikroTik</strong> routing — for production and disaster recovery environments.<br/>
+          • Led multi-site <strong>disaster recovery architecture</strong> design, including documented runbooks and tested failover procedures for compute, storage, and data-tier replication.<br/>
+          • Automated infrastructure provisioning and configuration management using <strong>Terraform and Ansible</strong>, and built Python/Bash tooling to reduce manual operational work.<br/>
+          • Conducted internal <strong>penetration testing and security hardening</strong> initiatives across the production estate, and authored <strong>HLD/LLD architecture documentation</strong> adopted as the team's technical design standard.<br/>
+          • Led zero-downtime production infrastructure migrations, guided Project Managers through technical design and delivery, and reported infrastructure architecture decisions directly to the Vice President of Products and Technology.<br/>
+          • Originally architected the IPDR (Internet Protocol Detail Record) platform — connecting IPDR infrastructure with IaaS/PaaS layers to reduce inter-site latency — later modernizing it from a legacy OpenStack-only deployment into a hybrid OpenStack + bare-metal Kubernetes architecture.
         </p>
       </div>
     </li>
@@ -535,87 +541,93 @@
 <div class="cv-section" data-aos="fade-up">
   <h3 class="section-title">Skills</h3>
 
-  <h5>Cloud Native Technology</h5>
+  <h5>Infrastructure Architecture & Reliability</h5>
   <ul class="skills">
-    <li>Container Application</li>
-    <li>AWS, Azure</li>
-    <li>Container Orchestration: Native Kubernetes, DCOS</li>
-    <li>Multi cloud multi cluster configuration</li>
-    <li>Microservices architecture</li>
-    <li>Various CNCF technologies: CI/CD, API Gateway, Service Mesh, Automation, Cloud Native Storage</li>
-    <li>OpenStack Cloud Platform</li>
+    <li>HLD / LLD Architecture Documentation</li>
+    <li>High Availability & Disaster Recovery Design</li>
+    <li>Enterprise Storage & Capacity Planning</li>
+    <li>Security Hardening & Internal Penetration Testing</li>
+    <li>Zero-Downtime Production Migration</li>
+    <li>Cross-Functional Technical Leadership</li>
   </ul>
 
-  <h5>Operating Systems</h5>
+  <h5>Container Orchestration & Virtualization</h5>
   <ul class="skills">
-    <li>7+ years Linux Server (Debian, RHEL, CentOS 7, CentOS Stream)</li>
-    <li>2 years Unix (OS X 10.5.4 – 10.7)</li>
-    <li>11+ years Linux Desktop (Ubuntu, OpenSUSE, Fedora, Backtrack)</li>
-    <li>Windows Desktop (7/8/10)</li>
-    <li>Windows Server (2008/2012/2016)</li>
-    <li>Virtualization: vCenter, Hyper-V</li>
+    <li>Kubernetes (Bare Metal, kubeadm, MetalLB)</li>
+    <li>Docker</li>
+    <li>Podman</li>
+    <li>OpenStack Cloud Platform (Nova, Neutron, Cinder, Keystone)</li>
+    <li>Proxmox VE (Clustering & HA)</li>
+    <li>VMware vSphere / ESXi, Hyper-V</li>
+    <li>AWS, Azure (fundamentals)</li>
+    <li>GitLab CI/CD & GitOps</li>
   </ul>
 
-  <h5>Programming & Scripting</h5>
+  <h5>Data & Storage Systems</h5>
   <ul class="skills">
-    <li>PHP (native, MVC, CodeIgniter, Laravel)</li>
-    <li>HTML5 & CSS3</li>
-    <li>Bootstrap</li>
-    <li>JavaScript, jQuery</li>
-    <li>Bash & Shell Scripting</li>
-    <li>XML, JSON, YAML</li>
-    <li>RESTful API</li>
-  </ul>
-
-  <h5>Networking</h5>
-  <ul class="skills">
-    <li>WAN, LAN, WLAN</li>
-    <li>Juniper Switching (VLAN, STP, QinQ)</li>
-    <li>Juniper Routing (Static, iBGP, eBGP)</li>
-    <li>Fortigate Firewall (VPN, IDS, IPS)</li>
-    <li>MikroTik (NAT, Firewall, Bandwidth Mgmt)</li>
-    <li>Squid Proxy, Radius Server</li>
-    <li>TCP/IP, HA Networking</li>
-    <li>NMS: MRTG, Cacti, LibreNMS, PRTG</li>
-  </ul>
-
-  <h5>Web Technology</h5>
-  <ul class="skills">
-    <li>Tomcat</li>
-    <li>Apache</li>
-    <li>Nginx</li>
-    <li>HAProxy</li>
-  </ul>
-
-  <h5>Database</h5>
-  <ul class="skills">
+    <li>Ceph Distributed Storage (RBD / CephFS / RGW)</li>
+    <li>Kafka (KRaft Mode)</li>
+    <li>PostgreSQL High Availability</li>
+    <li>Redis Sentinel</li>
+    <li>Percona MySQL Cluster</li>
     <li>MySQL</li>
     <li>MongoDB (NoSQL)</li>
   </ul>
 
-  <h5>DevOps & Agile</h5>
+  <h5>Networking & Security Appliances</h5>
   <ul class="skills">
-    <li>Basic Principles & Fundamentals</li>
-    <li>Product Strategy</li>
-    <li>Delivery Strategy</li>
+    <li>Juniper Switching & Routing (VLAN, STP, QinQ, iBGP/eBGP)</li>
+    <li>F5 BIG-IP (Load Balancing)</li>
+    <li>Fortinet FortiGate HA (VPN, IDS, IPS)</li>
+    <li>MikroTik (NAT, Firewall, Bandwidth Management)</li>
+    <li>Teleport (Zero Trust Access Management)</li>
+    <li>Nginx, HAProxy, Squid Proxy, Radius Server</li>
+    <li>WAN, LAN, WLAN, TCP/IP, HA Networking</li>
   </ul>
 
-  <h5>Tools & Software</h5>
+  <h5>Observability & Automation</h5>
   <ul class="skills">
-    <li>SMPP</li>
-    <li>Entrypass</li>
-    <li>Biostar</li>
-    <li>LibreNMS</li>
-    <li>Cacti</li>
+    <li>Prometheus</li>
     <li>Grafana</li>
-    <li>Kibana</li>
+    <li>Loki</li>
+    <li>Fluent Bit</li>
+    <li>Fluentd</li>
+    <li>ELK Stack (Kibana)</li>
+    <li>Terraform</li>
+    <li>Ansible</li>
+    <li>Python Automation</li>
+    <li>Bash & Shell Scripting</li>
+  </ul>
+
+  <h5>Operating Systems</h5>
+  <ul class="skills">
+    <li>Ubuntu Server</li>
+    <li>Rocky Linux</li>
+    <li>Debian</li>
+    <li>RHEL / CentOS 7 / CentOS Stream</li>
+    <li>Windows Server (2008/2012/2016)</li>
+    <li>Legacy Linux Desktop (OpenSUSE, Fedora)</li>
+  </ul>
+
+  <h5>Web & Application Technology</h5>
+  <ul class="skills">
+    <li>Tomcat, Apache, Nginx, HAProxy</li>
+    <li>PHP (CodeIgniter, Laravel)</li>
+    <li>RESTful API, JSON / YAML / XML</li>
+    <li>JavaScript, HTML5, CSS3</li>
+  </ul>
+
+  <h5>Monitoring & Legacy Tooling</h5>
+  <ul class="skills">
+    <li>LibreNMS, Cacti, PRTG, MRTG</li>
     <li>Druid</li>
+    <li>SMPP, Entrypass, Biostar</li>
     <li>Vim</li>
   </ul>
 
   <h5>Hardware</h5>
   <ul class="skills">
-    <li>All forms of x86 hardware – from laptops to quad Xeon CPU servers</li>
+    <li>x86 server hardware — from edge devices to multi-socket Xeon production servers</li>
   </ul>
 </div>
 
